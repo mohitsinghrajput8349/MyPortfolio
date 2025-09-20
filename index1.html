@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohit Singh Rajput | Full Stack Java Developer</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <style>
+        #vanta-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .profile-img {
+            border: 4px solid #3b82f6;
+            transition: all 0.3s ease;
+        }
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+        .skill-badge {
+            transition: all 0.3s ease;
+        }
+        .skill-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <div id="vanta-bg"></div>
+    
+    <!-- Navigation -->
+    <nav class="bg-gray-800 bg-opacity-90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <span class="text-blue-400 font-bold text-xl">MSR</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">About</a>
+                        <a href="#skills" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">Skills</a>
+                        <a href="#projects" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">Projects</a>
+                        <a href="#education" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">Education</a>
+                        <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-md hover:bg-gray-700 focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">About</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Skills</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Projects</a>
+                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Education</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-blue-400">Mohit Singh Rajput</span></h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6">Full Stack Java Developer</h2>
+                    <p class="text-lg text-gray-300 mb-8">Specializing in Spring Boot, React, and Angular with experience in Android development. Passionate about building robust and scalable applications.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">Contact Me</a>
+                        <a href="#projects" class="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-medium transition duration-300">View Projects</a>
+                    </div>
+                </div>
+                <div class="md:w-1/3" data-aos="fade-left">
+                    <div class="relative">
+                        <img id="profile-image" src="https://media.licdn.com/dms/image/v2/D4D03AQFKlUHQWUCJRg/profile-displayphoto-scale_400_400/B4DZfOYjhRH4Ak-/0/1751514234685?e=1761177600&v=beta&t=CZ1_emzhjxKakkV8hEBXvCSumZXBPNmscV4rHTQI4sU" alt="Mohit Singh Rajput" class="profile-img w-64 h-64 md:w-80 md:h-80 rounded-full object-cover mx-auto">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+        <!-- Education Section -->
+    <section id="education" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Education</h2>
+            <div class="space-y-8">
+                <!-- B.Tech -->
+                <div class="bg-gray-800 rounded-xl p-6" data-aos="fade-up">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div class="mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold text-blue-400">Bachelor of Technology (B.Tech)</h3>
+                            <p class="text-gray-300">RGPV University, Bhopal</p>
+                        </div>
+                        <div class="text-gray-400">2022 - Present</div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-300">Currently in 7th semester with CGPA of 7.5 in 6th semester</p>
+                    </div>
+                </div>
+                
+                <!-- 12th Class -->
+                <div class="bg-gray-800 rounded-xl p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div class="mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold text-blue-400">12th Class (Senior Secondary)</h3>
+                            <p class="text-gray-300">MP Board</p>
+                        </div>
+                        <div class="text-gray-400">2021 - 2022</div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-300">Completed with 89% (with Mathematics)</p>
+                    </div>
+                </div>
+                
+                <!-- 10th Class -->
+                <div class="bg-gray-800 rounded-xl p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div class="mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold text-blue-400">10th Class (Secondary)</h3>
+                            <p class="text-gray-300">MP Board</p>
+                        </div>
+                        <div class="text-gray-400">2019 - 2020</div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-300">Completed with 89%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-800 p-6 rounded-xl" data-aos="fade-up">
+                    <h3 class="text-xl font-bold mb-2 text-blue-400">Certified in Computer Networking</h3>
+                    <p class="text-gray-300">Comprehensive understanding of network protocols, architectures, and security principles.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold mb-2 text-blue-400">Certified in Java Programming</h3>
+                    <p class="text-gray-300">Expertise in Java and Java development with DSA and advanced OOP concepts.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold mb-2 text-blue-400">Certified in SQL & Database Management</h3>
+                    <p class="text-gray-300">Proficient in database design, optimization, and complex query writing.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-bold mb-2 text-blue-400">Certified in Android Studio Development with ML models</h3>
+                    <p class="text-gray-300">Skilled in building native Android applications with Java and modern Android SDK.</p>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800 bg-opacity-50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">About Me</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-400">Who I Am</h3>
+                    <p class="text-gray-300 mb-4">I'm a passionate Full Stack Java Developer currently pursuing my B.Tech from RGPV University, Bhopal. With expertise in Spring Boot, React, and Angular, I love building modern web applications that solve real-world problems.</p>
+                    <p class="text-gray-300 mb-4">My journey in software development began with a curiosity about how applications work, which led me to explore various technologies and frameworks. I'm particularly interested in backend development and system design.</p>
+                    <p class="text-gray-300">When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or mentoring fellow developers.</p>
+                </div>
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-400">What I Do</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-900 flex items-center justify-center mr-4">
+                                <i data-feather="code" class="text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Full Stack Development</h4>
+                                <p class="text-gray-400">Building complete web applications from frontend to backend using modern frameworks.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-900 flex items-center justify-center mr-4">
+                                <i data-feather="database" class="text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Backend Engineering</h4>
+                                <p class="text-gray-400">Designing robust APIs and database architectures with Spring Boot and JPA/Hibernate.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-900 flex items-center justify-center mr-4">
+                                <i data-feather="smartphone" class="text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Mobile Development</h4>
+                                <p class="text-gray-400">Creating Android applications with Java and exploring cross-platform solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">My Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <!-- Frontend Skills -->
+                                 <div class="bg-gray-800 p-6 rounded-xl skill-badge" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="flex flex-col items-center">
+                        <div class="h-16 w-16 mb-4">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="h-full w-full">
+                        </div>
+                        <span class="font-medium">Java</span>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl skill-badge" data-aos="zoom-in">
+                    <div class="flex flex-col items-center">
+                        <div class="h-16 w-16 mb-4">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="h-full w-full">
+                        </div>
+                        <span class="font-medium">React</span>
+                    </div>
+                </div>
+              
+                <div class="bg-gray-800 p-6 rounded-xl skill-badge" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="flex flex-col items-center">
+                        <div class="h-16 w-16 mb-4">
+                            <img src="https://img.icons8.com/?size=100&id=108784&format=png&color=000000" alt="Tailwind CSS" class="h-full w-full">
+                        </div>
+                        <span class="font-medium">JS</span>
+                    </div>
+                </div>
+                  <div class="bg-gray-800 p-6 rounded-xl skill-badge" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="flex flex-col items-center">
+                        <div class="h-16 w-16 mb-4">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" class="h-full w-full">
+                        </div>
+                        <span class="font-medium">Angular</span>
+                    </div>
+                </div>
+                
+                <!-- Backend Skills - Reordered as requested -->
+
+                <div class="bg-gray-800 p-6 rounded-xl skill-badge" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="flex flex-col items-center">
+                        <div class="h-16 w-16 mb-4">
+                            <img src="https://img.icons8.com/?size=100&id=90519&format=png&color=000000" alt="Spring Boot" class="h-full w-full">
+                        </div>
+                        <span class="font-medium">Spring Boot</span>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p极速6 rounded-xl skill-badge" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="flex flex-col items-center">
+                        <div class="h-16 w-16 mb-4">
+                            <img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" alt="React" class="h-full w-full">
+                        </div>
+                        <span class="font-medium">GitHub</span>
+                    </div>
+                </div>
+                
+                <!-- Database Skills -->
+                <div class="bg-gray-800 p-6 rounded-xl skill-badge" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="flex flex-col items-center">
+                        <div class="h-16 w-16 mb-4">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="h-full w-full">
+                        </div>
+                        <span class="font-medium">MySQL</span>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl skill-badge" data-aos="zoom-in" data-aos-delay="700">
+                    <div class="flex flex-col items-center">
+                        <div class="h-16 w-16 mb-4">
+                            <img src="https://img.icons8.com/?size=100&id=84710&format=png&color=000000" alt="MongoDB" class="h-full w-full">
+                        </div>
+                        <span class="font-medium">Bootstrap</span>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl skill-badge" data-aos="zoom-in" data-aos-delay="800">
+                    <div class="flex flex-col items-center">
+                        <div class="h-16 w-16 mb-4">
+                            <img src="https://img.icons8.com/?size=100&id=EgOU93v1DHjU&format=png&color=000000" alt="PostgreSQL" class="h-full w-full">
+                        </div>
+                        <span class="font-medium">Android Studio</span>
+                    </div>
+                </div>
+                
+                <!-- DevOps Skills -->
+                <div class="bg-gray-800 p-6 rounded-xl skill-badge" data-aos="zoom-in" data-aos-delay="900">
+                    <div class="flex flex-col items-center">
+                        <div class="h-16 w-16 mb-4">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="h-full w-full">
+                        </div>
+                        <span class="font-medium">Docker</span>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl skill-badge" data-aos="zoom-in" data-aos-delay="1000">
+                    <div class="flex flex-col items-center">
+                        <div class="h-16 w-16 mb-4">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" class="h-full w-full">
+                        </div>
+                        <span class="font-medium">Kubernetes</span>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl skill-badge" data-aos="zoom-in" data-aos-delay="1100">
+                    <div class="flex flex-col items-center">
+                        <div class="h-16 w-16 mb-4">
+                            <img src="https://img.icons8.com/?size=100&id=62452&format=png&color=000000" alt="AWS" class="h-full w-full">
+                        </div>
+                        <span class="font-medium">FireBase</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800 bg-opacity-50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Chat Application -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden project-card" data-aos="fade-up">
+                    <div class="h-48 bg-gray-700 flex items-center justify-center">
+                        <img src="data:image/webp;base64,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" alt="Chat Application" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Chat Application</h3>
+                        <p class="text-gray-300 mb-4">A real-time chat application built with Spring Boot for the backend and React for the frontend, featuring user authentication and message persistence.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-900 text-blue-300 px-3 py-1 rounded-full text-xs">Spring Boot</span>
+                            <span class="bg-blue-900 text-blue-300 px-3 py-1 rounded-full text-xs">React</span>
+                            <span class="bg-blue-900 text-blue-300 px-3 py-1 rounded-full text-xs">WebSocket</span>
+                            <span class="bg-blue-900 text-blue-300 px-3 py-1 rounded-full text-xs">JWT</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/mohitsinghrajput8349/chatAppSpring" target="_blank" class="text-blue-400 hover:text-blue-300 flex items-center">
+                                <i data-feather="github" class="mr-1"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Food Application -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-gray-700 flex items-center justify-center">
+                        <img src="http://static.photos/food/640x360/44" alt="Food Application" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Food Application</h3>
+                        <p class="text-gray-300 mb-4">A comprehensive food ordering and management system developed with Spring Boot backend and Angular frontend, including admin dashboard and user roles.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-900 text-blue-300 px-3 py-1 rounded-full text-xs">Spring Boot</span>
+                            <span class="bg-blue-900 text-blue-300 px-3 py-1 rounded-full text-xs">MySQL</span>
+                            <span class="bg-blue-900 text-blue-300 px-3 py-1 rounded-full text-xs">React</span>
+                            <span class="bg-blue-900 text-blue-300 px-3 py-1 rounded-full text-xs">JPA/Hibernate</span>
+                            <span class="bg-blue-900 text-blue-300 px-3 py-1 rounded-full text-xs">REST API</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/mohitsinghrajput8349/foodApplication" target="_blank" class="text-blue-400 hover:text-blue-300 flex items-center">
+                                <i data-feather="github" class="mr-1"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Tools & Concepts Section -->
+    <section id="tools-concepts" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800 bg-opacity-50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Tools & Concepts</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Tools Section -->
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-400">Tools & Technologies</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <span class="text-blue-400">•</span> Git
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <span class="text-blue-400">•</span> GitHub
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <span class="text-blue-400">•</span> MySQL Workbench
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <span class="极速text-blue-400">•</span> Android Studio
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <span class="text-blue-400">•</span> Docker
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <span class="text-blue-400">•</span> VS Code
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <span class="text-blue-400">•</span> ChatGPT
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <span class="text-blue-400">•</span> Figma
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <span class="text-blue-400">•</span> Razorpay
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <span class="text-blue-400">•</span> Many More...
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Concepts Section -->
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-400">Concepts & Methodologies</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <span class="text-blue-400">•</span> JWT
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <span class="text-blue-400">•</span> OAuth2
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <span class="text-blue-400">•</span> JPA/Hibernate
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <span class="text-blue-400">•</span> Servlet
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <span class="text-blue-400">•</span> CI/CD
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <span class="text-blue-400">•</span> ORM
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <span class="text-blue-400">•</span> MVC
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <span class="text-blue-400">•</span> Payment Gateways
+                        </div>
+                       
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <span class="text-blue-400">•</span> DBMS
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <span class="text-blue-400">•</span> Networking
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800 bg-opacity-50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Get In Touch</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-400">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-900 flex items-center justify-center mr-4">
+                                <i data-feather="mail" class="text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Email</h4>
+                                <a href="mailto:msrajput8349@gmail.com" class="text-gray-300 hover:text-blue-400">msrajput8349@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-900 flex items-center justify-center mr-4">
+                                <i data-feather="phone" class="text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Phone</h4>
+                                <a href="tel:+918349078835" class="text-gray-300 hover:text-blue-400">+91 8349078835</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-900 flex items-center justify-center mr-4">
+                                <i data-feather="github" class="text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">GitHub</h4>
+                                <a href="https://github.com/mohitsinghrajput8349" target="_blank" class="text-gray-300 hover:text-blue-400">github.com/mohitsinghrajput8349</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-900 flex items-center justify-center mr-4">
+                                <i data-feather="linkedin" class="text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">LinkedIn</h4>
+                                <a href="https://linkedin.com/in/mohit-singh-rajput-120811258" target="_blank" class="text-gray-300 hover:text-blue-400">linkedin.com/in/mohit-singh-rajput</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-400">Send Me a Message</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300 w-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400">© 2023 Mohit Singh Rajput. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/mohitsinghrajput8349" target="_blank" class="text-gray-400 hover:text-blue-400">
+                        <i data-feather="github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/mohit-singh-rajput-120811258" target="_blank" class="text-gray-400 hover:text-blue-400">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="mailto:msrajput8349@gmail.com" class="text-gray-400 hover:text-blue-400">
+                        <i data-feather="mail"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Vanta.js background
+        VANTA.NET({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x3b82f6,
+            backgroundColor: 0x111827,
+            points: 12.00,
+            maxDistance: 20.00,
+            spacing: 15.00
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.toggle('hidden');
+        });
+
+        // Change profile image function
+        function changeProfileImage() {
+            const randomSeed = Math.floor(Math.random() * 1000) + 1;
+            document.getElementById('profile-image').src = `http://static.photos/technology/640x360/${randomSeed}`;
+        }
+
+        // Initialize AOS and Feather Icons
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+    </script>
+</body>
+</html>
